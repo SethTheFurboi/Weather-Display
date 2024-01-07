@@ -1,8 +1,8 @@
-# Daily Planner
+# Weather Display
 
 ## Description
 
-A workday scheduler
+A weather display website
 
 ![Demonstration](./Assets/Demonstration.gif)
 

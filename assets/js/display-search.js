@@ -78,7 +78,7 @@ function printResults(resultObj) {
     var bodyContentEl = document.createElement('p');
     
     var ImageElement = document.createElement('img');
-    ImageElement.src = ('http://openweathermap.org/img/w/' +  TitleWeather.weather[0].icon + ".png")
+    ImageElement.src = ('https://openweathermap.org/img/w/' +  TitleWeather.weather[0].icon + ".png")
 
 
     bodyContentEl.innerHTML =
@@ -116,7 +116,7 @@ function printResults(resultObj) {
   var TitleWeather = resultObj.list[0]
 
   var ImageElement = document.createElement('img');
-  ImageElement.src = ('http://openweathermap.org/img/w/' +  TitleWeather.weather[0].icon + ".png")
+  ImageElement.src = ('https://openweathermap.org/img/w/' +  TitleWeather.weather[0].icon + ".png")
 
   var titleEl = document.createElement('h3');
   titleEl.textContent = resultObj.city.name + ' (' + TitleWeather.dt_txt + ")";
@@ -148,7 +148,7 @@ function printResults(resultObj) {
 }
 
 function GetLatAndLong(query) {
-  var FindCoordinatesURL = 'http://api.openweathermap.org/geo/1.0/direct?q=';
+  var FindCoordinatesURL = 'https://api.openweathermap.org/geo/1.0/direct?q=';
 
   console.log(query)
 
@@ -180,7 +180,7 @@ function GetLatAndLong(query) {
 
 function GetWeather(Lat, Long) {
 
-  var GetWeatherURL = 'http://api.openweathermap.org/data/2.5/forecast?lat=' + Lat + '&lon=' + Long + '&appid=' + APIKey + '&units=imperial'
+  var GetWeatherURL = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + Lat + '&lon=' + Long + '&appid=' + APIKey + '&units=imperial'
 
   fetch(GetWeatherURL)
   .then(function (response) {
